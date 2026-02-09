@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <div class="dashboard-container">
+            <!-- Main Content -->
+            <main class="main-content">
+                <header class="top-header">
+                    <div class="header-title">
+                        <h1>HACKATHON TRACKER</h1>
+                    </div>
+                    <div class="header-actions">
+                        <div class="search-icon-btn">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <div class="notification-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+                        <div class="profile-icon">
+                            <i data-lucide="more-vertical"></i>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="content-grid single-column">
+                    <!-- Main Table Card -->
+                    <section class="card table-card">
+                        <div class="table-container">
+                            <table id="hackathon-table">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Hackathon Name</th>
+                                        <th>Teams</th>
+                                        <th>Round 1</th>
+                                        <th>Round 2</th>
+                                        <th>Finale</th>
+                                        <th>Status</th>
+                                        <th>Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="hackathon-body">
+                                    <!-- Data injected by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

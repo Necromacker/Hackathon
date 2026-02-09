@@ -1,0 +1,177 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #fef08a 0%, #f472b6 100%);
+    --dashboard-bg: #e8eaf6;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-primary: #1e1b4b;
+    --table-header-gradient: linear-gradient(90deg, #818cf8, #6366f1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dashboard-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.dashboard-container {
+    width: 100%;
+    background: var(--dashboard-bg);
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-icon-btn,
+.notification-icon {
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.search-icon-btn:hover,
+.notification-icon:hover {
+    background: #f1f5f9;
+    color: #4f46e5;
+}
+
+.search-icon-btn i,
+.notification-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-icon {
+    cursor: pointer;
+    color: #64748b;
+}
+
+.card {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background: var(--table-header-gradient);
+    color: white;
+}
+
+th {
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 40px;
+}
+
+td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f8fafc;
+}
+
+.bold-date {
+    font-weight: 700;
+    color: #1e1b4b;
+}
+
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-applied {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-pending {
+    background: #fef9c3;
+    color: #854d0e;
+}
